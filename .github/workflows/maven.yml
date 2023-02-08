@@ -30,3 +30,11 @@ jobs:
       run: echo "Hi World!"
     - name: Store artifact
       run: echo "Hello World!"
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://github.com
+    steps:
+      - name: deploy
