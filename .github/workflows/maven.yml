@@ -29,6 +29,7 @@ jobs:
     
     
   deployment:
+    needs: build
     runs-on: ubuntu-latest
     
     steps:
@@ -49,6 +50,7 @@ jobs:
       run: echo "Hello World!"
 
   store-atifact:
+    needs: deployment
     runs-on: ubuntu-latest
     
     steps:
