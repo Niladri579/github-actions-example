@@ -25,7 +25,7 @@ jobs:
   
     
   deploy-qa:
-
+    needs: build
     runs-on: ubuntu-latest
 
     steps:

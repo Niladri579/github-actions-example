@@ -28,7 +28,7 @@ jobs:
       run: echo "Hi World!"
 
   Deploy-dev:
-
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -45,7 +45,7 @@ jobs:
       run: echo "Hi World!"
 
   unit-testing:
-
+    needs: Deploy-dev
     runs-on: ubuntu-latest
 
     steps:
