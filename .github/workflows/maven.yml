@@ -27,8 +27,8 @@ jobs:
       run: mvn clean install
 
     
-    - name: branch-deploy
-      uses: github/branch-deploy@v4.1.0
+    - name: Deploy
+      run: echo "Hello World!"
     - name: Store artifact
       run: echo "Hello World!"
 
