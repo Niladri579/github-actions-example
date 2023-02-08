@@ -22,7 +22,6 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Unit Testing
-      run: echo "Hello World!"
+  
     - name: Deploy 
       run: echo "Hi World!"
