@@ -28,7 +28,7 @@ jobs:
       run: echo "Hi World!"
 
   Deploy-dev:
-
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
