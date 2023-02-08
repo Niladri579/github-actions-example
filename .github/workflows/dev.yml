@@ -26,3 +26,37 @@ jobs:
       run: echo "Hello World!"
     - name: Deploy 
       run: echo "Hi World!"
+
+  Deploy-dev:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '1.8'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build with Maven
+      run: mvn clean install
+    - name: Deploy 
+      run: echo "Hi World!"
+
+  unit-testing:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '1.8'
+        distribution: 'adopt'
+        cache: maven
+
+    - name: Unit Testing
+      run: echo "Hello World!"
+
