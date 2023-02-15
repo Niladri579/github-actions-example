@@ -53,7 +53,19 @@ jobs:
       run: mvn clean install
     - name: Deploy 
       run: echo "Hi World!"
-    
+    - name: Send approval request
+        uses:create-issue-from-file@v2
+        with:
+          title: 'Deployment Approval Request'
+          assignees: 'username'
+          labels: 'approval'
+          body: |
+            Please approve this deployment by commenting :+1: on this issue.
+      - name: Wait for approval
+        uses: wait-for-approval@v1
+        with:
+          issue-number: ${{ steps.send_approval_request.outputs.number }}
+          repository-token: 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
   unit-testing:
     needs: Deploy-dev
     runs-on: ubuntu-latest
