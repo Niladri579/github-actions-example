@@ -29,7 +29,7 @@ jobs:
 
     - uses: trstringer/manual-approval@v1
       with:
-        
+        secret: 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
         approvers: user1,user2,org-team1
         minimum-approvals: 1
         issue-title: "Deploying v1.3.5 to prod from staging"
