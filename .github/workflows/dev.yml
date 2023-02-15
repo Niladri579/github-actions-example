@@ -36,7 +36,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
       - name: Send approval request
-        uses: Niladri579/github-actions-example@v2
+        uses: Niladri579/github-actions-example@v3
         with:
           title: 'Deployment Approval Request'
           assignees: 'Niladri579'
