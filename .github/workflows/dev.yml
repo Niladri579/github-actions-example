@@ -20,23 +20,7 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install
-
-    - name: Send approval request
-        uses:create-issue-from-file@v2
-        with:
-          title: 'Deployment Approval Request'
-          assignees: 'Niladri579'
-          labels: 'approval'
-          body: |
-            Please approve this deployment by commenting :+1: on this issue.
-      - name: Wait for approval
-        uses: wait-for-approval@v1
-        with:
-          issue-number: ${{ steps.send_approval_request.outputs.number }}
-          repository-token: ${{ secrets.GITHUB_TOKEN }}
-    
-    
+      run: mvn clean install  
   Deploy-dev:
     needs: build
     runs-on: ubuntu-latest
@@ -52,7 +36,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
     - name: Deploy 
-      run: echo "Hi World!"
+      run: echo "Hello World!"
     - name: Send approval request
       uses: peter-evans/create-issue-from-file@v2
       with:
@@ -79,6 +63,6 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
-    - name: Unit Testing
+    - name: Unit Testing started here
       run: echo "Hello World!"
 
