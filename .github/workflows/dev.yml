@@ -39,7 +39,7 @@ jobs:
     # Secret
           secret: ${{ secrets.SECRET_TOKEN }}
     # Minimum number of approvals to progress workflow
-          minimum-approvals:  optional
+          minimum-approvals: 1
     # Timeout before approval
           approval-wait: 30 
   
