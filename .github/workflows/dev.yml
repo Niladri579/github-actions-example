@@ -37,7 +37,7 @@ jobs:
     # Required approvers
           approvers: https://github.com/Niladri579
     # Secret
-          secret: OGEDemo
+          secret: ${{ secrets.GITHUB_TOKEN }}
     # Minimum number of approvals to progress workflow
           minimum-approvals: 1
     # Timeout before approval
