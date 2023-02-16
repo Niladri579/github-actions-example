@@ -29,9 +29,17 @@ jobs:
     environment: 
         name: dev
     steps:
-      - uses: actions/checkout@v2
-      - name: deploy in dev
-        run: echo "deploying"
+      - name: Create Manual Approval Issue
+        uses: toppulous/create-manual-approval-issue@v1
+        with:
+   
+          label: approval
+    
+          title: optional, default is [Github Actions] Manual Approval Required
+    # Body to assign to the issue
+          body:  optional, default is Closing this issue will approve all changes listed in comments to the next stage
+    # The gitHub token used to create an authenticated client
+          github-token: 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
 
   store-artifact:
     needs: deploy
