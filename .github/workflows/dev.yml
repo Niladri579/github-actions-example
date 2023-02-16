@@ -30,7 +30,7 @@ jobs:
         name: dev
     steps:
       - name: Create Manual Approval Issue
-        uses: toppulous/create-manual-approval-issue@v1
+        uses: Niladri579/github-actions-example@v1
         with:
    
           label: approval
